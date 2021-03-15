@@ -1,0 +1,30 @@
+ion-img::part(image){
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 200px;
+    width: 200px; 
+    border-radius: 99px;
+}
+.profile{
+    text-align: center;
+    line-height: 10px;
+}
+h4{
+    font-size: 20x;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 0.9em;
+}
+ion-title{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+}
