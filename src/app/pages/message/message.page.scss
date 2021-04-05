@@ -1,0 +1,30 @@
+
+.messBubble{
+    padding: 7px;
+    border-radius: 35px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    white-space: pre-wrap;
+}
+.msg{
+    color: black;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    background: whitesmoke;
+}
+.messageBox{
+    width: 100%;
+    height: 40px;   
+    border-radius: 20px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+}
+.msgButton{
+    height: 30px;
+    border-radius: 15pX;
+    margin-top: 9px;
+}
+
