@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { MessagePageModule } from '../pages/message/message.module';
 
 @Component({
@@ -10,8 +10,10 @@ import { MessagePageModule } from '../pages/message/message.module';
 export class Tab3Page {
   contName="";
   contNumber="";
-  contacts=[];
-  constructor(public alertController: AlertController)  {}
+  contacts: any = [];
+
+
+  constructor(public alertCtrl: AlertController)  {}
 
   saveContact() {
     let contact = {
@@ -30,8 +32,8 @@ export class Tab3Page {
   }
   
 
-  async deleteConfirm(i) {
-    const alert = await this.alertController.create({
+  async deleteConfirm(cont) {
+    const confirm = await this.alertCtrl.create({
       header: 'Confirm!',
       message: 'Are you sure you want to delete this contact?',
       buttons: [
@@ -43,16 +45,15 @@ export class Tab3Page {
         }, {
           text: 'Delete',
           handler: () => {
-            this.contacts.splice(i,1);
-          }
+            let index = this.contacts.indexOf(cont);
+            if(index > -1){
+              this.contacts.splice(index,1);
+            }
+        }
         }
       ]
-    });
+    } );
 
-    await alert.present();
+    await confirm.present();
   }
-
-
-    
-
 }
